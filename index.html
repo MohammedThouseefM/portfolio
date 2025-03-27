@@ -9,6 +9,7 @@
     <title>I Am Mohammed Thouseef</title>
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/johndoe.css">
+    
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -743,20 +744,27 @@
                 <div class="col-lg-8">
                     <div class="contact-form-card">
                         <h4 class="contact-title">Send a message</h4>
-                        <form action="">
+                        <form onsubmit="sendMail(event)">
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Name *" required>
+                                <input class="form-control" id="name" type="text" placeholder="Name *" required>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Email *" required>
+                                <input class="form-control" id="email" type="email" placeholder="Email *" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" placeholder=" Message *" rows="7" required></textarea>
+                                <input class="form-control" id="subject" type="text" placeholder="Subject *" required>
                             </div>
-                            <div class="form-group ">
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" placeholder="Message *" rows="7" required></textarea>
+                            </div>
+                            <div class="form-group">
                                 <button type="submit" class="form-control btn btn-primary">Send Message</button>
                             </div>
                         </form>
+                        
+                        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                        <script src="assets/js/scriptcontactus.js"> </script>
+                        
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -832,17 +840,15 @@
     <!-- Isotope  -->
     <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
 
-    <!-- Google mpas -->
-    <!-- <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script> -->
+    <!--Google mpas -->
+     <!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
 
-    <!-- JohnDoe js -->
-    <script src="assets/js/johndoe.js"></script>
+    <script src="assets/js/johndoe.js"></script> -->
 
-    
+
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2025/03/25/13/20250325134544-2CF6CXWF.js"></script>
-    
 
 </body>
 
